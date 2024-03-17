@@ -1,0 +1,739 @@
+/***************************
+COLORS
+dark grey: #21292D
+
+Blue: #0094FF
+Aqua: #01FFFF
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+****************************/
+
+*{
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+.overlaycaption,figure,
+b, u, i, center,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%; 
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+  	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+
+:focus  { outline: 0; }
+
+/* deleting the default appearence for form elements */
+input[type=text], input[type=password], input[type=submit], input[type=button], textarea, button, select { -moz-appearance: none; -webkit-appearance: none; }
+
+/* HTML5 display definitions */
+article, aside, details, .overlaycaption, figure, footer, header, hgroup, menu, nav, section, dialog { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; visibility: hidden; }
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	overflow:hidden;
+}
+.nav{
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:40px;
+}
+.nav img{
+	max-width:160px;
+	padding:10px;
+}
+.showMobile{
+		display:none;
+	}
+.navLinks{
+	display:flex;
+	width:50%;
+	justify-content:space-around;
+	padding-top:60px;
+}
+.link{
+	color:black;
+	font-size:1.2em;
+	
+}
+.link {
+  background-image: linear-gradient(
+    to right,
+    #0094FF,
+    #01FFFF 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.link:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+.link:hover {
+ background-position: 0;
+}
+a:hover::before {
+  width: 100%;
+}
+
+/***.link:hover{
+	 background: -webkit-linear-gradient(left, #0094FF, #01FFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	letter-spacing:.1em;
+} ****/
+.header{
+	display:flex;
+	justify-content:space-around;
+	width:84%;
+	margin: 0 auto;
+	padding-bottom:40px;
+	max-width:1500px;
+
+}
+.headerLeft{
+	width:70%;
+}
+.mainHeading{
+	font-weight:900;
+	font-size:5em;
+	line-height:90px;
+	 background: -webkit-linear-gradient(left, #0094FF, #01FFFF, #81F8F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	
+}
+.subHeading{
+	font-size:2em;
+	padding-top:40px;
+}
+.headerRight {
+	width:100%;
+  background-image: url(images/mrT%20BG.png); 
+  background-color:white; 
+  height: 740px; /* You must set a specified height */
+  background-position: right center; 
+  background-repeat: no-repeat; 
+  background-size: contain; /
+	display:flex;
+}
+.section1{
+	margin-top:100px;
+	background-color:black;
+	
+}
+.specialOffer{
+	position:absolute;
+	right:0;
+	padding-top:100px;
+	color:white;
+	max-width:30%;
+	text-align:center;
+	padding-right:20px;
+}
+.offerHeading{
+	font-size:2.5em;
+}
+.specialOffer p{
+	font-size:1.2em;
+	line-height:32px;
+}
+.offer{
+	font-weight:900;
+	font-size:1.6em;
+	padding:20px 0;
+}
+.specialOffer2{
+	color:black;
+}
+.headerRight2{
+	display:none;
+}
+.middle{
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	align-items:center;
+}
+.underline{
+	position:relative;
+}
+.underline::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 8px;
+  border-radius: 2px;
+  background: linear-gradient(111.3deg, #0094FF 9.6%, #01FFFF 93.6%);
+}
+.serviceList{
+	font-size:1.2em;
+	padding-top:5px;
+}
+.booking{
+	width:60%;
+	margin: 60px auto;
+	display:flex; 
+	justify-content:space-between;
+	max-width:1100px;
+}
+.installTitle{
+	text-align:center;
+	font-size:5em;
+	padding:80px 0 20px;
+	 background: -webkit-linear-gradient(left, #0094FF, #01FFFF, #81F8F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.leftBooking{
+	color:white;
+}
+.leftBookingInner{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.text{
+	font-size:1.6em;
+}
+svg{
+	margin:14px 0;
+}
+.phoneNumber{
+	font-size:1.5em;
+	 background: -webkit-linear-gradient(left, #0094FF, #01FFFF, #81F8F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	padding-bottom:16px;
+}
+.location{
+	color:black;
+}
+.copyright{
+	color:white;
+	text-align:center;
+	padding:10px 0;
+	font-size:.9em;
+}
+.copyright a{
+	 background: -webkit-linear-gradient(left, #0094FF, #01FFFF, #81F8F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	transition: all ease .5s;
+}
+.copyright a:hover{
+	letter-spacing:.2em;
+}
+/*********************************
+FORM
+**********************************/
+.formContainer{
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	background-color:black;
+	color:white;
+	width:350px;
+	max-width:450px;
+}
+.subFormContainer{
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+}
+.formTitle{
+	padding-bottom:20px;
+	font-size:1.6em;
+	text-align:center;
+	color:white;
+}
+.formGroup{
+	display: flex;
+	flex-direction: column;
+}
+.formTextArea{
+	padding:6px;
+}
+textarea{
+	height:100px;
+}
+
+.formLabel{
+	padding:12px 0 2px;
+}
+.outerButtonContainer{
+	display:flex;
+	width:100%;
+	justify-content:center;
+	margin-top:30px;
+}
+.buttonContainer{
+	margin-top:20px;
+}
+.button{
+	padding:10px 30px;
+	border-color: #CEBC8B;
+	border-width: 6px;
+}
+input, textarea{
+	border-color:#18FFFE;
+}
+
+/*******************************
+BUTTON HOVER
+*****************************************/
+.buttonfx{
+  color: white; /* button text color */
+	font-size:1.2em;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #18FFFE;
+  letter-spacing: 0.0625em;
+  padding: 8px 10px; 
+  text-transform: uppercase;
+  line-height: 2;
+  position: relative;
+	display: inline-block;
+  margin-bottom: 20px;
+  cursor: pointer;
+	text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #18FFFE; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: black; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+	color: white;
+	opacity:90%;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+.slidebottomleft:after{
+  transform: translate3D(-100%,100%,0);
+}
+
+.slidebottomleft:hover:after{
+	transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+
+/***************************
+Button Top AREA BOOK NOW 
+*****************************/
+.button {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 270px;
+  overflow: hidden;
+  border-radius: 40px;
+	margin-top:40px;
+	text-align:center;
+
+
+}
+
+.button span {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-family: Arial;
+  letter-spacing: 6px;
+  z-index: 1;
+}
+
+.button .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 270px;
+  height: 200px;
+  background: #01D8FF;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.button .liquid::after,
+.button .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.button .liquid::before {
+  
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.button .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+.button:hover .liquid{
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/***********************************
+WAVE ANIMATION
+************************************/
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+/*******************************
+THANK YOU PAGE
+*****************************************/
+.thankYouLogo{
+	display:flex;
+	justify-content:center;
+}
+.thankYouContainer{
+	height: 100vh;
+	background-color:black;
+	margin-top:-100px
+}
+.thankYouContainer h1{
+	font-size:6em;
+	text-align:center;
+	width:90%;
+	margin: 0 auto;
+	color:white;
+	padding-top:120px;
+}
+
+/*****************************************
+MEDIA QUERIES
+********************************************/
+
+@media(max-width:1200px){
+	.booking{
+		width:80%;
+	}
+	.installTitle{
+		padding:20px;
+	}
+	.section1{
+		margin-top:50px;
+	}
+}
+
+@media(max-width:1000px){
+	.mainHeading{
+		font-size:4em;
+		line-height:70px;
+	}
+	.header{
+		width:98%;
+	}
+	.navLinks{
+		width:70%;
+	}
+}
+@media(max-width:900px){
+	
+	.headerLeft{
+		padding-left:10px;
+	}
+	
+	.toiletImage{
+		max-width:100%;
+	}
+	.formContainer{
+		width:300px;
+	}
+	.installTitle{
+		font-size:3.5em;
+	}
+	.booking{
+		width:90%;
+	}
+	.button{
+		padding:20px 5px;
+		width:220px
+	}
+	.button .liquid{
+		width:220px;
+	}
+}
+@media(max-width:710px){
+	.nav{
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		margin-bottom:10px;
+		background-color:black;
+		padding: 10px 0;
+	}
+	.navLinks{
+		padding-top:0;
+		width:20%;
+	}
+	.hideMobile{
+		display:none;
+	}
+	.header{
+		flex-direction:column;
+		padding-bottom:0;
+	}
+	.headerLeft{
+		width:100%;
+		padding-right:10px;
+	}
+	.mainHeading{
+		font-size:3em;
+		line-height:50px;
+		text-align:center;
+		padding-top:30px;
+	}
+	.booking{
+		width:98%;
+		margin: 30px auto;
+		flex-direction:column;
+		justify-content:center;
+	}
+	.rightBooking{
+		display:flex;
+		justify-content:center;
+		margin-top:50px;
+	}
+	.installTitle{
+		padding:60px 10px 30px;
+	}
+	.showMobile{
+		display:block;
+	}
+	.nav img{
+		padding:0;
+	}
+	.thankYouContainer h1{
+		font-size:3.5em;
+	}
+}
+@media(max-width:420px){
+	.mainHeading{
+		font-size:2.5em;
+	}
+	.installTitle{
+		font-size:2.5em;
+		padding: 30px 5px;
+	}
+	.subHeading{
+		padding-top:30px;
+		font-size:1.8em;
+	}
+	.nav img{
+		max-width:120px;
+	}
+	.underline::before{
+		height:6px;
+	}
+
+}
+@media(max-width:300px){
+	.text, .formTitle, .offer{
+		font-size:1.3em;
+	}
+	.mainHeading{
+		padding-top:0;
+	}
+	.subHeading{
+		font-size:1.5em;
+	}
+	.underline::before{
+		height:4px;
+	}
+	.booking{
+		width:90%;
+	}
+	.thankYouContainer h1{
+		font-size:2em;
+	}
+	.thankYouLogoImg{
+		max-width:200px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
